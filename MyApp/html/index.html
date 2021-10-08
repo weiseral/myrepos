@@ -3,53 +3,84 @@
     <head>
     
     <link rel="stylesheet" href="../css/style.css"/>
-    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>Chatter|App</title>
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     
-   
     </head>
 
     <body>
-        <section>
-            <h1>chatter|app</h1>
-            <!--Überschift-->
+        <section id="Kanalansicht" style="position:fixed" >
+            <!--Überschift und Logo-->
+            <div class="headbar">
+                <h1 id="app-titel">
+                <img id="logo" src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="Here is the Logo" style="width: 56px; height: 56px" >
+                chatter | app</h1> 
+            </div>
 
-            <h2>Favorites</h2>
-    
-            <strong>MeetUp</strong>
-            <small>10:15</small><br>
-            <strong>Oktoberfest</strong>
-            <small>13:15</small>
-        
-            <h2>Regular</h2>
-        
-            <strong>Weather</strong>
-            <small> Yesterday</small><br>
-            <strong>Continents</strong> 
-            <small>23 May 2018</small><br>
+            <!--Chanel-->
+            <div>
+                <h2>Favorites</h2>
+           <ul class="chanel-list" > 
+           <li class="selected"> 
+               <span class="Kanalname">MeetUp</span>
+               <span class="time">10:15</span></li>
+           <li>
+               <span class="Kanalname">Oktoberfest</span>
+               <span class="time">13:15</span></li>
+             </ul>
+                <h2>Regular</h2>
+            <ul class="chanel-list" > 
+            <li> 
+                <span class="Kanalname">Weather</span>
+                <span class="time">Yesterday</span></li>
+            <li>
+                <span class="Kanalname">Continents</span>
+                <span class="time">23 May</span></li>
+           </ul>
+        </div>
         </section>
-        <section>
-            <h1>MeetUp</h1><br>
-            <!--Cannel:Meet Up-->
-            <button>Favorite</button>
-            <h2>Mandy</h2>
-            <p>Hey how are you?</p>
-            <small>10:15</small>
-        
-            <h2>Olivia</h2>
-            <p> Ok nice, see you at the busstation.</p>
-            <small>15:15</small>
 
-            <h2>Paul</h2>
-            <p>Can you send me the photos of today?</p>
-        <small>19:15</small>
-        <br>
-        <input>
+        <section id="Chat" > 
+            <div class="headbar"> 
+                <h1>MeetUp</h1>
+                <button>Favorite</button>
+             </div>
+
+             <div id="Chat-Area"  >
+             <div class="message incoming-message">
+             <div class="message-content">
+                <h3>Mandy</h3>
+                <p>Hey how are you?</p>
+             </div>
+             <span class="timestamp">11:45</span>
+            </div>
+
+            <div class="message outgoing-message">
+                <div class="message-content">
+                    <p>It was so nice today. 
+                    </p>
+                </div>
+                <span class="timestamp">11:49</span>
+            </div>
+        
+           
+            <div class="message incoming-message">
+                <div class="message-content">
+                    <h3>Olivia</h3>
+                    <p>Have a nice day!
+                    </p>
+                </div>
+                <span class="timestamp">11:49</span>
+            </div>
+        </div>
+
+        <div>
+        <input type="text" id="Inputfield" name="message-input" minlength="1" maxlength="500" placeholder="Inputfield">
         <button>Send</button>
+        </div>
     </section>
     </body>
 </html>

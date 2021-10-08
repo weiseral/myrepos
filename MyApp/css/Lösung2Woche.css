@@ -1,9 +1,7 @@
-/*------------global------------*/
 * {
     font-family: Roboto, Arial, sans-serif;
-    margin: 0px;
-    padding: 0px;
-
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -11,43 +9,75 @@ body {
     width: 100%;
 }
 
-#Kanalansicht{
-    width: 399px;
+section {    
+    position: fixed;
+    top: 0px;
     height: 100vh;
 }
-#Chat{
-    
-position: relative;
-left: 400px;
 
-}
-li{
-box-sizing: border-box;
-padding: 22px;
-height: 66px;
+#channel-area {
+    width: 399px;
+    height: 100vh;
+    border-right: 1px solid rgb(199, 199, 199);
 }
 
+#message-area {
+    width: calc(100% - 400px);
+    left: 400px;
+}
+/* APP BAR */
 
-/*---------App-Bar-------------*/
-.headbar{
-    background-color: rgb(21, 95, 95);
-    height: 100px;
-    font-size:20px;
-    padding: 10px;
-    line-height: 40px;
-    color: white;
+.headbar {
+    background-color: #eeeeee;
+    color: #00838f;
+    height: 66px;
+    line-height: 66px;
+    padding: 0px 22px 0px 22px;
+}
+
+.headbar img {
+    background-color: #00838f;
+}
+
+#app-title {
+    color: #00838f;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+.headbar i {
+    line-height: 66px;
+}
+
+#logo {
+    height: 44px;
 }
 
 
-/*---------Channel-List---------*/
+/* CHANNELS LIST */
+
 h2 {
     color: #00838f;
-    font-size: smaller;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
     margin: 22px 22px 11px 11px; 
+}
 
+.channel-list {
+    /* #3 #channels #list modifies h2 to ul */
+    background-color: white;
+    /* #3 #channels #bullets removed */
+    list-style-type: none;
+}
+
+.channel-list li {
+    box-sizing: border-box;
+    padding: 22px;
+    height: 66px;
 }
 
 .channel-list li.selected {
@@ -55,25 +85,7 @@ h2 {
     border-right: 3px solid #00838f;
 }
 
-.chanel-list{
-    background-color: white;
-    list-style-type: none;
-}
-.channel-list li {
-    box-sizing: border-box;
-    padding: 22px;
-    height: 66px;
-}
-
-
-.Kanalname{
-    font-weight: bold;
-}
-.time{
-font-size: smaller;
-}
-/*-------Messages-------*/
-
+/* MESSAGES */
 #message-area h1 {
     display: inline;
 }
@@ -111,9 +123,7 @@ font-size: smaller;
     color: #666666;
 }
 
-p {
-    background-color: #eeeeee;
-}
+/* MESSAGE-BUTTONS */
 
 button {
     background-color: #00838f;
